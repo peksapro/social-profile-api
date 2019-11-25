@@ -11,8 +11,5 @@ defmodule ProfileApi.Repo.Migrations.CreateUsers do
     end
 
     create unique_index(:users, [:email])
-    #create unique_index(:your_table, [:col1, :col2], name: :your_index_name)
   end
-
-
 end
