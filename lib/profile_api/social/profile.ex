@@ -12,7 +12,7 @@ defmodule ProfileApi.Social.Profile do
   end
 
   def changeset(profile, attrs) do
-    required_fields = [:name, :platform]
+    required_fields = [:name, :platform, :user_id]
 
     profile
     |> cast(attrs, required_fields)
@@ -27,10 +27,8 @@ defmodule ProfileApi.Social.Profile do
     case changeset.valid? do
       true ->
         platform = get_field(changeset, :platform)
-        platform
-        |> format_social_platform()
-        |> is_social_platform_allow?(changeset)
-        |> put_change(:platform, platform)
+        is_social_platform_allow?(platform,changeset)
+        put_change(changeset, :platform, format_social_platform(platform))
     end
   end
 
