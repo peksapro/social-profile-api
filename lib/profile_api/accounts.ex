@@ -9,33 +9,13 @@ defmodule ProfileApi.Accounts do
   alias ProfileApi.Accounts.User
 
   @doc """
-  Returns the list of users.
+  Returns the user with the given `id`.
 
-  ## Examples
-
-      iex> list_users()
-      [%User{}, ...]
-
+  Returns `nil` if the user does not exist.
   """
-  def list_users do
-    Repo.all(User)
+  def get_user(id) do
+    Repo.get(User, id)
   end
-
-  @doc """
-  Gets a single user.
-
-  Raises `Ecto.NoResultsError` if the User does not exist.
-
-  ## Examples
-
-      iex> get_user!(123)
-      %User{}
-
-      iex> get_user!(456)
-      ** (Ecto.NoResultsError)
-
-  """
-  def get_user!(id), do: Repo.get!(User, id)
 
   @doc """
   Creates a user.
@@ -87,18 +67,5 @@ defmodule ProfileApi.Accounts do
   """
   def delete_user(%User{} = user) do
     Repo.delete(user)
-  end
-
-  @doc """
-  Returns an `%Ecto.Changeset{}` for tracking user changes.
-
-  ## Examples
-
-      iex> change_user(user)
-      %Ecto.Changeset{source: %User{}}
-
-  """
-  def change_user(%User{} = user) do
-    User.changeset(user, %{})
   end
 end

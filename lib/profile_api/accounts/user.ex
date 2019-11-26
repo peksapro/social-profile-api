@@ -5,8 +5,8 @@ defmodule ProfileApi.Accounts.User do
   schema "users" do
     field :email, :string
     field :name, :string
-    field :password, :string
-    field :password_hash, :string, virtual: true
+    field :password_hash, :string
+    field :password, :string, virtual: true
 
     timestamps()
   end
