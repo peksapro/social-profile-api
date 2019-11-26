@@ -12,6 +12,7 @@
 alias ProfileApi.Repo
 alias ProfileApi.Accounts.User
 alias ProfileApi.Social.Profile
+alias ProfileApi.Social.Follower
 
 %User{
   name: "John Snow",
@@ -115,3 +116,24 @@ alias ProfileApi.Social.Profile
   platform: "facebook",
   user_id: 6
 } |> Repo.insert!
+%Follower{
+  profile_id: 1,
+  follower_id: 3,
+} |> Repo.insert!
+%Follower{
+  profile_id: 1,
+  follower_id: 5,
+} |> Repo.insert!
+%Follower{
+  profile_id: 3,
+  follower_id: 6,
+} |> Repo.insert!
+%Follower{
+  profile_id: 3,
+  follower_id: 1,
+} |> Repo.insert!
+%Follower{
+  profile_id: 6,
+  follower_id: 1,
+} |> Repo.insert!
+

@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8423779a-bea5-4a1e-ad85-d8eb6b2016be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/profile_api/social/profile.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/profile_api/social/profile.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.iex.exs" beforeDir="false" afterPath="$PROJECT_DIR$/.iex.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/profile_api/social.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/profile_api/social.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20191124154823_create_users.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20191124154823_create_users.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20191125170623_create_profiles.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20191125170623_create_profiles.exs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/priv/repo/seeds.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/seeds.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/profile_api/social_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/profile_api/social_test.exs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +55,7 @@
       <workItem from="1574617557859" duration="1071000" />
       <workItem from="1574693319858" duration="1639000" />
       <workItem from="1574713848670" duration="5013000" />
+      <workItem from="1574764460947" duration="6032000" />
     </task>
     <servers />
   </component>

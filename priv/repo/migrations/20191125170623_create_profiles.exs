@@ -5,7 +5,7 @@ defmodule ProfileApi.Repo.Migrations.CreateProfiles do
     create table(:profiles) do
       add :name, :string, null: false
       add :platform, :string, null: false
-      add :user_id, references(:users), null: false
+      add :user_id, references(:users, on_delete: :delete_all), null: false
       timestamps()
     end
 
