@@ -7,6 +7,7 @@ defmodule ProfileApi.Social do
   alias ProfileApi.Repo
 
   alias ProfileApi.Social.Profile
+  alias ProfileApi.Accounts.User
 
   @doc """
   Returns the list of profiles.
@@ -49,9 +50,10 @@ defmodule ProfileApi.Social do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_profile(attrs \\ %{}) do
+  def create_profile(%User{} = user,attrs \\ %{}) do
     %Profile{}
     |> Profile.changeset(attrs)
+    |> Ecto.Changeset.put_assoc(:user, user)
     |> Repo.insert()
   end
 
