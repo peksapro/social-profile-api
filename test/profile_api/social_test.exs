@@ -3,11 +3,13 @@ defmodule ProfileApi.SocialTest do
 
   alias ProfileApi.Social
 
+  #I have a issue with virtual fields and foreign keys in test
+
   describe "profiles" do
     alias ProfileApi.Social.Profile
 
-    @valid_attrs %{name: "some name", platform: "some platform"}
-    @update_attrs %{name: "some updated name", platform: "some updated platform"}
+    @valid_attrs %{name: "some name", platform: "Twitter", user_id: 1}
+    @update_attrs %{name: "some updated name", platform: "Facebook"}
     @invalid_attrs %{name: nil, platform: nil}
 
     def profile_fixture(attrs \\ %{}) do
@@ -18,6 +20,7 @@ defmodule ProfileApi.SocialTest do
 
       profile
     end
+
 
     test "list_profiles/0 returns all profiles" do
       profile = profile_fixture()
@@ -119,5 +122,7 @@ defmodule ProfileApi.SocialTest do
       follower = follower_fixture()
       assert %Ecto.Changeset{} = Social.change_follower(follower)
     end
+
   end
+
 end

@@ -2,12 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8423779a-bea5-4a1e-ad85-d8eb6b2016be" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/comeonin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/comeonin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/connection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/connection.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/cowboy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/cowboy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/cowlib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/cowlib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/db_connection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/db_connection.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/decimal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/decimal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ecto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ecto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ecto_sql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ecto_sql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gettext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gettext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jason.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jason.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/pbkdf2_elixir.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/pbkdf2_elixir.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/phoenix.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_ecto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/phoenix_ecto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_pubsub.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/phoenix_pubsub.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/plug.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug_cowboy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/plug_cowboy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug_crypto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/plug_crypto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgrex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/postgrex.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ranch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ranch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/telemetry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/telemetry.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/profile_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/profile_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.iex.exs" beforeDir="false" afterPath="$PROJECT_DIR$/.iex.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/profile_api/social.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/profile_api/social.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20191124154823_create_users.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20191124154823_create_users.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20191125170623_create_profiles.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20191125170623_create_profiles.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/seeds.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/seeds.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/profile_api/accounts_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/profile_api/accounts_test.exs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/profile_api/social_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/profile_api/social_test.exs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +73,7 @@
       <workItem from="1574617557859" duration="1071000" />
       <workItem from="1574693319858" duration="1639000" />
       <workItem from="1574713848670" duration="5013000" />
-      <workItem from="1574764460947" duration="6032000" />
+      <workItem from="1574764460947" duration="8796000" />
     </task>
     <servers />
   </component>
