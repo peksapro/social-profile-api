@@ -6,21 +6,43 @@ defmodule ProfileApi.Social do
   import Ecto.Query, warn: false
   alias ProfileApi.Repo
 
-  alias ProfileApi.Social.Profile
+  alias ProfileApi.Social.{Profile, Follower}
   alias ProfileApi.Accounts.User
 
   @doc """
-  Returns the list of profiles.
+  Returns a list of profiles matching the given `criteria`.
 
-  ## Examples
+  Example Criteria:
 
-      iex> list_profiles()
-      [%Profile{}, ...]
-
+  [{:limit, 15}, {:order, :asc}, {:filter, [{:platform, "twitter"}, {:user_id, 3}]}]
   """
-  def list_profiles do
-    Repo.all(Profile)
+  def list_profiles(criteria) do
+    query = from p in Profile
+
+    Enum.reduce(criteria, query, fn
+      {:limit, limit}, query ->
+        from p in query, limit: ^limit
+
+      {:filter, filters}, query ->
+        filter_with(filters, query)
+
+      {:order, order}, query ->
+        from p in query, order_by: [{^order, :id}]
+    end)
+    |> Repo.all
   end
+
+  defp filter_with(filters, query) do
+    Enum.reduce(filters, query, fn
+      {:platform, value}, query ->
+        from q in query, where: q.platform == ^value
+
+      {:user_id, value}, query ->
+        from q in query, where: q.user_id == ^value
+
+    end)
+  end
+
 
   @doc """
   Gets a single profile.
