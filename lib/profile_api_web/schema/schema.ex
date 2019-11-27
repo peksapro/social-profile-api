@@ -18,8 +18,13 @@ defmodule ProfileApiWeb.Schema.Schema do
       arg :filter, type: :profile_filter
       resolve &Resolvers.Social.profiles/3
     end
-  end
 
+    @desc "Get a list of profiles with max count followers"
+    field :profiles_with_followers_number, list_of(:profile_with_followers_number) do
+      resolve &Resolvers.Social.get_profiles_with_followers_count/3
+    end
+
+  end
   input_object :profile_filter do
     field :platform, :string
     field :user_id, :integer
@@ -36,5 +41,14 @@ defmodule ProfileApiWeb.Schema.Schema do
     field :name, non_null(:string)
     field :platform, non_null(:string)
   end
+
+  object :profile_with_followers_number do
+    field :id, non_null(:id)
+    field :user_id, non_null(:integer)
+    field :name, non_null(:string)
+    field :nubmer_of_followers, non_null(:integer)
+  end
+
+
 
 end

@@ -60,6 +60,30 @@ defmodule ProfileApi.Social do
   """
   def get_profile!(id), do: Repo.get!(Profile, id)
 
+  def get_profiles_with_followers_count() do
+    from(p in Profile,
+      join: f in Follower,
+      on: f.profile_id == p.id,
+      select: %{id: p.id, user_id: p.user_id ,name: p.name, nubmer_of_followers: count(f.profile_id)},#[p.id, p.name, count(f.profile_id) as nubmer_of_followers],
+      group_by: [p.id],
+      order_by: [desc: count(f.profile_id)]
+    ) |> Repo.all
+    #order_by - for sure exists a more effective way, maybe fragment?
+  end
+
+  def get_profiles_where_followers_count(value) do
+    from(p in Profile,
+      join: f in Follower,
+      on: f.profile_id == p.id,
+      select: %{id: p.id, user_id: p.user_id ,name: p.name, nubmer_of_followers: count(f.profile_id)},#[p.id, p.name, count(f.profile_id) as nubmer_of_followers],
+      where: count(f.profile_id) > ^value,
+      group_by: [p.id],
+      order_by: [desc: count(f.profile_id)]
+    ) |> Repo.all
+    #order_by, where - for sure exists a more effective way than reusing count(f.profile_id), maybe fragment?
+  end
+
+
   @doc """
   Creates a profile.
 
