@@ -25,6 +25,17 @@ defmodule ProfileApiWeb.Schema.Schema do
     end
 
   end
+
+  mutation do
+    @desc "Create a profile"
+    field :create_profile, :profile do
+      arg :name, non_null(:string)
+      arg :platform, non_null(:string)
+      arg :user_id, non_null(:integer)
+      resolve &Resolvers.Social.create_profile/3
+    end
+  end
+
   input_object :profile_filter do
     field :platform, :string
     field :user_id, :integer
@@ -48,7 +59,6 @@ defmodule ProfileApiWeb.Schema.Schema do
     field :name, non_null(:string)
     field :nubmer_of_followers, non_null(:integer)
   end
-
 
 
 end

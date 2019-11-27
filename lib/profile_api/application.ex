@@ -6,14 +6,16 @@ defmodule ProfileApi.Application do
   use Application
 
   def start(_type, _args) do
+    import Supervisor.Spec
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
       ProfileApi.Repo,
       # Start the endpoint when the application starts
-      ProfileApiWeb.Endpoint
+      ProfileApiWeb.Endpoint,
       # Starts a worker by calling: ProfileApi.Worker.start_link(arg)
       # {ProfileApi.Worker, arg},
+      supervisor(Absinthe.Subscription, [ProfileApiWeb.Endpoint])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -1,5 +1,6 @@
 defmodule ProfileApiWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :profile_api
+  use Absinthe.Phoenix.Endpoint
 
   socket "/socket", ProfileApiWeb.UserSocket,
     websocket: true,

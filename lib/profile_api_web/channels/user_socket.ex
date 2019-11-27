@@ -1,5 +1,6 @@
 defmodule ProfileApiWeb.UserSocket do
   use Phoenix.Socket
+  use Absinthe.Phoenix.Socket, schema: ProfileApiWeb.Schema.Schema
 
   ## Channels
   # channel "room:*", ProfileApiWeb.RoomChannel
