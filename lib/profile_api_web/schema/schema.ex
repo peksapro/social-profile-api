@@ -1,7 +1,5 @@
 defmodule ProfileApiWeb.Schema.Schema do
   use Absinthe.Schema
-  alias ProfileApi.Accounts.User
-  alias ProfileApi.Social.{Profile, Follower}
   alias ProfileApiWeb.Resolvers
 
   query do
