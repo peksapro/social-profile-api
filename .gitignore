@@ -28,3 +28,4 @@ profile_api-*.tar
 /priv/static/
 
 .idea
+.elixir_ls
