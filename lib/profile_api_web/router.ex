@@ -1,4 +1,7 @@
 defmodule ProfileApiWeb.Router do
+  @moduledoc """
+  The Profile Api router.
+  """
   use ProfileApiWeb, :router
 
   pipeline :api do
