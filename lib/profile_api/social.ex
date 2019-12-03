@@ -60,6 +60,7 @@ defmodule ProfileApi.Social do
   """
   def get_profile!(id), do: Repo.get!(Profile, id)
 
+  @spec get_profiles_with_followers_count :: any
   def get_profiles_with_followers_count() do
     from(p in Profile,
       join: f in Follower,

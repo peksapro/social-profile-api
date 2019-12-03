@@ -17,6 +17,8 @@ defmodule ProfileApiWeb.Resolvers.Social do
     {:ok, Social.get_profiles_with_followers_count()}
   end
 
+  @spec create_profile(any, %{optional(:__struct__) => none, optional(atom | binary) => any}, any) ::
+          {:error, [{:details, map} | {:message, <<_::200>>}, ...]} | {:ok, any}
   def create_profile(_, args, _) do
     user = ProfileApi.Accounts.get_user(args[:user_id])
     case Social.create_profile(user, args) do
